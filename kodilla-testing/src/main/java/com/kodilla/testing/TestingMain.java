@@ -21,10 +21,10 @@ public class TestingMain {
         System.out.println();
         System.out.println("Test - Pierwszy test jednostkowy:");
 
-        Calculator calculator = new Calculator(15, 10);
+        Calculator calculator = new Calculator();
 
-        int resultOfAdd = calculator.add();
-        int resultOfSubtract = calculator.subtract();
+        int resultOfAdd = calculator.add(15, 10);
+        int resultOfSubtract = calculator.subtract(15, 10);
 
         if (resultOfAdd == 25) {
             System.out.println("Test OK.");
