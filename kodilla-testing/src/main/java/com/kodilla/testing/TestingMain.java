@@ -6,39 +6,6 @@ import com.kodilla.testing.calculator.Calculator;
 
 public class TestingMain {
     public static void main (String[]args){
-        System.out.println("Moduł 6. Wprowadzenie to testowania oprogramowania");
-
-        SimpleUser simpleUser = new SimpleUser("theForumUser");
-
-        String result = simpleUser.getUsername();
-
-        if (result.equals("theForumUser")) {
-            System.out.println("Test OK.");
-        }else {
-            System.out.println("Error.");
-        }
-
-        System.out.println();
-        System.out.println("Test - Pierwszy test jednostkowy:");
-
-        Calculator calculator = new Calculator();
-
-        int resultOfAdd = calculator.add(15, 10);
-        int resultOfSubtract = calculator.subtract(15, 10);
-
-        if (resultOfAdd == 25) {
-            System.out.println("Test OK.");
-        }else {
-            System.out.println("Error.");
-        }
-
-        if (resultOfSubtract == 5) {
-            System.out.println("Test OK.");
-        }else {
-            System.out.println("Error.");
-        }
-
-
 
     }
 }
