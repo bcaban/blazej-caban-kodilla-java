@@ -38,7 +38,7 @@ public class CalculateStatisticsTestSuite {
         names.add("Kamil");
         names.add("Wojtek");
         names.add("Adam");
-        names.add("Łukasz");
+        names.add("Lukasz");
 
 
         when(statisticsMock.usersNames()).thenReturn(names);
@@ -76,7 +76,7 @@ public class CalculateStatisticsTestSuite {
         names.add("Kamil");
         names.add("Wojtek");
         names.add("Adam");
-        names.add("Łukasz");
+        names.add("Lukasz");
 
 
         when(statisticsMock.usersNames()).thenReturn(names);
@@ -109,7 +109,7 @@ public class CalculateStatisticsTestSuite {
         names.add("Kamil");
         names.add("Wojtek");
         names.add("Adam");
-        names.add("Łukasz");
+        names.add("Lukasz");
 
 
         when(statisticsMock.usersNames()).thenReturn(names);
@@ -142,7 +142,7 @@ public class CalculateStatisticsTestSuite {
         names.add("Kamil");
         names.add("Wojtek");
         names.add("Adam");
-        names.add("Łukasz");
+        names.add("Lukasz");
 
 
         when(statisticsMock.usersNames()).thenReturn(names);
@@ -175,7 +175,7 @@ public class CalculateStatisticsTestSuite {
         names.add("Kamil");
         names.add("Wojtek");
         names.add("Adam");
-        names.add("Łukasz");
+        names.add("Lukasz");
 
 
         when(statisticsMock.usersNames()).thenReturn(names);
@@ -208,7 +208,7 @@ public class CalculateStatisticsTestSuite {
         names.add("Kamil");
         names.add("Wojtek");
         names.add("Adam");
-        names.add("Łukasz");
+        names.add("Lukasz");
 
 
         when(statisticsMock.usersNames()).thenReturn(names);
