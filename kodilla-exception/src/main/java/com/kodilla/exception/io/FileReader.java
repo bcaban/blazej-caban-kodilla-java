@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 
 public class FileReader {
 
-    public void readFile(String fileName) {
+    public void readFile(String fileName) throws FileReaderException {
 
         try {
             String data = new String(Files.readAllBytes(Paths.get(fileName)));
@@ -16,7 +16,7 @@ public class FileReader {
 
 
         } catch (IOException e) {
-            System.out.println("Oh no! Something went wrong! Error " + e);
+            throw new FileReaderException();
 
 
         } finally {
