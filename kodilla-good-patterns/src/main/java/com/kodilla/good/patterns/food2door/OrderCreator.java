@@ -11,9 +11,9 @@ public class OrderCreator {
         Customer customer = new Customer("John");
 
         List<Product> products = new ArrayList<>();
-        products.add(new Product("Apple", 2));
-        products.add(new Product("Banana", 2));
-        products.add(new Product("Carrot", 6));
+        products.add(new Product("Apples", 2));
+        products.add(new Product("Bananas", 2));
+        products.add(new Product("Carrots", 6));
         products.add(new Product("Bread", 2));
         products.add(new Product("Pasta", 3));
         products.add(new Product("Cookies", 3));

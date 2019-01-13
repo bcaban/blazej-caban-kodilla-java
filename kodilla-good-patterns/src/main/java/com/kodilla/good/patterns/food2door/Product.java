@@ -20,6 +20,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return productName + " " + productQuantity + " piece/s";
+        return productName + " " + productQuantity;
     }
 }

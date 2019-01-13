@@ -35,7 +35,7 @@ public class OrderProcess {
                     orderDto.setCompleted(false);
                 }
             } else {
-                System.out.println("The order is incomplete!");
+                System.out.println("Supplier not found!");
             }
         }
 

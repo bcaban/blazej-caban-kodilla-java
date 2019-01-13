@@ -9,14 +9,28 @@ public class HealthyShop implements FoodProducer {
     private static Map<String, Integer> products = new HashMap<>();
 
     static {
-        products.put("Apple", 5);
-        products.put("Banana", 6);
-        products.put("Carrot", 10);
+        products.put("Apples", 5);
+        products.put("Bananas", 6);
+        products.put("Carrots", 10);
     }
 
     @Override
     public boolean processOrder(Product product) {
-        return true;
+        Integer valuesInMagazine = products.get(product.getProductName());
+        int valuesInMagazineAfterOrder = valuesInMagazine - product.getProductQuantity();
+
+        if (valuesInMagazine >= product.getProductQuantity()) {
+            products.put(product.getProductName(), valuesInMagazineAfterOrder);
+            System.out.println("Magazine: " + products);
+            return true;
+        } else if (valuesInMagazine != 0) {
+            System.out.println("Currently we don't have as many kilograms of " + product.getProductName() + " as you have chosen.");
+
+        } else {
+            System.out.println("We don't have " + product.getProductName() + " in magazine");
+
+        }
+        return false;
     }
 
     @Override
