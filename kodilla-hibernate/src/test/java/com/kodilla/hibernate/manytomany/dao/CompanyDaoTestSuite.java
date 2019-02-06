@@ -60,7 +60,7 @@ public class CompanyDaoTestSuite {
             companyDao.delete(softwareMachineId);
             companyDao.delete(dataMaestersId);
             companyDao.delete(greyMatterId);
-        }catch (Exception e) {
+        } catch (Exception e) {
             //do nothing
         }
     }
@@ -87,9 +87,15 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, searchBySmith.size());
         Assert.assertEquals(0, searchByJohnson.size());
 
-        employeeDao.delete(johnSmithId);
-        employeeDao.delete(stephanieClarcksonId);
-        employeeDao.delete(lindaKovalskyId);
+        //CleanUp
+        try {
+            employeeDao.delete(johnSmithId);
+            employeeDao.delete(stephanieClarcksonId);
+            employeeDao.delete(lindaKovalskyId);
+        } catch (Exception e) {
+            //do nothing
+        }
+
     }
 
     @Test
@@ -114,8 +120,14 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, result1.size());
         Assert.assertEquals(0, result2.size());
 
-        companyDao.delete(softwareMachineId);
-        companyDao.delete(dataMaestersId);
-        companyDao.delete(greyMatterId);
+        //CleanUp
+        try {
+            companyDao.delete(softwareMachineId);
+            companyDao.delete(dataMaestersId);
+            companyDao.delete(greyMatterId);
+        } catch (Exception e) {
+            //do nothing
+        }
+
     }
 }
