@@ -47,6 +47,6 @@ public class StoredProcTestSuite {
         if (rs.next()) {
             howManyBestsellers = rs.getInt("HOW_MANY_BESTSELLERS");
         }
-        assertEquals(4, howManyBestsellers);
+        assertEquals(5, howManyBestsellers);
     }
 }
