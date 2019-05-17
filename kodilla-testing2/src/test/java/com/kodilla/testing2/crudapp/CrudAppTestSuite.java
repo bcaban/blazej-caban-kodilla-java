@@ -24,7 +24,7 @@ public class CrudAppTestSuite {
     public void initTests() throws InterruptedException {
         driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get(BASE_URL);
-        Thread.sleep(10000);
+        Thread.sleep(30000);
         generator = new Random();
     }
 
@@ -56,7 +56,7 @@ public class CrudAppTestSuite {
     private void sendTestTaskToTrello(String taskName) throws InterruptedException {
         driver.navigate().refresh();
 
-        while (!driver.findElement(By.xpath("//select[1]")).isDisplayed()) ;
+        while (!driver.findElement(By.xpath("//select[1]")).isDisplayed());
 
         driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
                 .filter(anyForm ->
@@ -72,6 +72,8 @@ public class CrudAppTestSuite {
                     buttonCreateCard.click();
                 });
         Thread.sleep(5000);
+        driver.switchTo().alert().accept();
+        Thread.sleep(2000);
     }
 
     private boolean checkTaskExistsInTrello(String taskName) throws InterruptedException {
@@ -80,8 +82,8 @@ public class CrudAppTestSuite {
         WebDriver driverTrello = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driverTrello.get(TRELLO_URL);
 
-        driverTrello.findElement(By.id("user")).sendKeys("");
-        driverTrello.findElement(By.id("password")).sendKeys("");
+        driverTrello.findElement(By.id("user")).sendKeys("b.caban1996@gmail.com");
+        driverTrello.findElement(By.id("password")).sendKeys("NPBIAvVSGP9012CTKJ");
         driverTrello.findElement(By.id("login")).submit();
 
         Thread.sleep(2000);
